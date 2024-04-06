@@ -2,30 +2,30 @@
 import { ref } from 'vue'
 const PersonData = ref ([
     {
-        picture: './assets/home.png',
+        picture: require('../assets/home.png'),
         fullname: 'Joko Keladi',
         address: 'Jl. Meteor VI No. 198',
         hobi: [
-            {image: './assets/futsal.jpg'},
-            {image: './assets/catur.jpg'}]
+            {image: require('../assets/futsal.jpg')},
+            {image: require('../assets/catur.jpg')}]
     },
     {
-        picture: './assets/water.png',
+        picture: require('../assets/water.png'),
         fullname: 'Alex Silalahi',
         address: 'Jl. Pandan X No. 30',
         hobi: [
-            {image: './assets/renang.jpg'}, 
-            {image: './assets/tinju.jpg'}, 
-            {image: './assets/sepak bola.jpg'}]
+            {image: require('../assets/renang.jpg')}, 
+            {image: require('../assets/tinju.jpg')}, 
+            {image: require('../assets/sepak bola.jpg')}]
     },
     {
-        picture: './assets/star.png',
+        picture: require('../assets/star.png'),
         fullname: 'Subir Kompani',
         address: 'Jl. Sekar Buana V No. 11',
         hobi: [
-            {image: './assets/bulu_tangkis.jpg'}, 
-            {image: './assets/futsal.jpg'}, 
-            {image: './assets/catur.jpg'}]
+            {image: require('../assets/bulu_tangkis.jpg')}, 
+            {image: require('../assets/futsal.jpg')}, 
+            {image: require('../assets/catur.jpg')}]
     }
  ])
 
@@ -46,7 +46,7 @@ const PersonData = ref ([
             <div class="hobby">
                 <p class="user-hobbies">hobbies:</p>
                 <div class="list-hobbies">
-                    <img v-for="hobbies in person.hobi" :key="hobbies" :src="hobi" alt="hobbies">
+                    <img v-for="hobbies in person.hobi" :key="hobbies.image" :src="hobbies.image" alt="hobbies">
                 </div>
             </div>
         </div>
